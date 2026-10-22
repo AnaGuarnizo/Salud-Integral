@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salud Integral | Centro de Emergencias 911</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">✚ Salud Integral</a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="vitales.html">Signos Vitales</a>
+    <a href="rotacion.html">Reloj Postural</a>
+    <a href="emergencias.html" class="btn-alerta-nav activo">🚨 Alarma 911</a>
+    <a href="citas.html">Citas</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <div class="encabezado">
+      <span class="etiqueta">Urgencias</span>
+      <h2>Asistente de Emergencias 911 & Alarma</h2>
+      <p>Genera un guión automático para llamada de socorro y activa una alarma sonora de emergencia.</p>
+    </div>
+
+    <div class="herramienta-box">
+      <div style="display:flex; gap:10px; justify-content: center; flex-wrap: wrap;">
+        <button id="btn-sirena" class="boton boton-alerta" onclick="conmutarSirena()">
+          🚨 Activar Alarma / Sirena
+        </button>
+        <button class="boton" onclick="reproducirVozGuion()">
+          🔊 Leer Guión en Voz Alta
+        </button>
+      </div>
+
+      <div class="panel-emergencia">
+        <h3>Prepara la información para el operador de emergencias:</h3>
+        
+        <div class="inputs-grid" style="margin-top:15px;">
+          <div class="campo-input">
+            <label>Nombre del Paciente</label>
+            <input type="text" id="em-nombre" value="María López" oninput="actualizarGuion()">
+          </div>
+          <div class="campo-input">
+            <label>Dirección exacta</label>
+            <input type="text" id="em-direccion" value="Av. Principal y Calle 3ra" oninput="actualizarGuion()">
+          </div>
+        </div>
+
+        <label style="font-weight:bold; font-size:14px;">Selecciona los síntomas actuales:</label>
+        <div class="sintomas-grid">
+          <div class="chip-sintoma" onclick="toggleSintoma(this, 'Dolor fuerte en el pecho')">Dolor en el pecho</div>
+          <div class="chip-sintoma" onclick="toggleSintoma(this, 'Dificultad severa para respirar')">Falta de aire</div>
+          <div class="chip-sintoma" onclick="toggleSintoma(this, 'Pérdida del conocimiento o desmayo')">Inconsciente</div>
+          <div class="chip-sintoma" onclick="toggleSintoma(this, 'Parálisis facial o debilidad en brazo')">Signos de Ictus</div>
+          <div class="chip-sintoma" onclick="toggleSintoma(this, 'Sangrado abundante sin parar')">Sangrado severo</div>
+        </div>
+
+        <div class="guion-caja">
+          <strong>📜 Guión para leer al 911:</strong>
+          <p id="texto-guion" style="margin-top: 8px; color: #333; line-height: 1.5;"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="autor-badge">✚ Salud Integral 2026 - Asistencia Rápida</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salud Integral | Agendamiento de Citas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">✚ Salud Integral</a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="vitales.html">Signos Vitales</a>
+    <a href="rotacion.html">Reloj Postural</a>
+    <a href="emergencias.html" class="btn-alerta-nav">🚨 Alarma 911</a>
+    <a href="citas.html" class="activo">Citas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="fondo-claro">
+    <div class="encabezado">
+      <span class="etiqueta">Agendamiento</span>
+      <h2>Solicitar Cita Médica</h2>
+      <p>Reserva tu atención llenando los datos del formulario.</p>
+    </div>
+
+    <div class="herramienta-box" style="max-width: 600px;">
+      <form id="form-cita" onsubmit="procesarCita(event)">
+        <div class="campo-input" style="margin-bottom: 15px;">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="nombre" required placeholder="Ej. Ana García">
+        </div>
+
+        <div class="campo-input" style="margin-bottom: 15px;">
+          <label for="correo">Correo Electrónico</label>
+          <input type="email" id="correo" required placeholder="ejemplo@correo.com">
+        </div>
+
+        <div class="campo-input" style="margin-bottom: 15px;">
+          <label for="especialidad">Especialidad Requerida</label>
+          <select id="especialidad" required>
+            <option value="">Seleccione una especialidad</option>
+            <option value="medicina-general">Medicina General</option>
+            <option value="enfermeria">Enfermería</option>
+            <option value="odontologia">Odontología</option>
+            <option value="laboratorio">Laboratorio Clínico</option>
+          </select>
+        </div>
+
+        <div class="campo-input" style="margin-bottom: 15px;">
+          <label for="fecha">Fecha Preferida</label>
+          <input type="date" id="fecha" required>
+        </div>
+
+        <div class="campo-input" style="margin-bottom: 20px;">
+          <label for="motivo">Motivo de Consulta (Opcional)</label>
+          <textarea id="motivo" rows="3" placeholder="Describe brevemente el motivo..."></textarea>
+        </div>
+
+        <button type="submit" class="boton" style="width: 100%;">Confirmar y Reservar Cita</button>
+      </form>
+
+      <div id="mensaje-cita" class="mensaje-confirmacion">
+        ✔ ¡Cita registrada con éxito! Nos pondremos en contacto para confirmar la hora.
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="autor-badge">✚ Salud Integral 2026 - Reserva en Línea</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salud Integral | Servicios Médicos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">✚ Salud Integral</a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html" class="activo">Servicios</a>
+    <a href="vitales.html">Signos Vitales</a>
+    <a href="rotacion.html">Reloj Postural</a>
+    <a href="emergencias.html" class="btn-alerta-nav">🚨 Alarma 911</a>
+    <a href="citas.html">Citas</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <div class="encabezado">
+      <span class="etiqueta">Especialidades</span>
+      <h2>Nuestros Servicios Médicos</h2>
+      <p>Haz clic en cualquier tarjeta para abrir la información médica detallada, horarios e indicaciones.</p>
+    </div>
+
+    <div class="grid-tarjetas">
+      <div class="tarjeta-interactiva" onclick="abrirModal('Medicina General', 'Evaluación clínica integral, diagnósticos, recetas y derivación a especialidades. Atendemos enfermedades agudas y crónicas.', 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80')">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" alt="Medicina General">
+        <div class="tarjeta-cuerpo">
+          <div>
+            <h3>Medicina General</h3>
+            <p>Atención médica primaria y chequeos preventivos rutinarios.</p>
+          </div>
+          <span class="indicador-clic">🔍 Haz clic para más información</span>
+        </div>
+      </div>
+
+      <div class="tarjeta-interactiva" onclick="abrirModal('Enfermería & Cuidado', 'Control de constantes, curaciones, administración de medicamentos, vacunación e instrucción sanitaria preventiva.', 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80')">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80" alt="Enfermería">
+        <div class="tarjeta-cuerpo">
+          <div>
+            <h3>Enfermería</h3>
+            <p>Cuidados de enfermería, procedimientos sanitarios y seguimiento.</p>
+          </div>
+          <span class="indicador-clic">🔍 Haz clic para más información</span>
+        </div>
+      </div>
+
+      <div class="tarjeta-interactiva" onclick="abrirModal('Odontología Preventiva', 'Limpiezas dentales, diagnóstico de caries, salud de encías y recomendaciones higiénicas bucodentales.', 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80')">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Odontología">
+        <div class="tarjeta-cuerpo">
+          <div>
+            <h3>Odontología</h3>
+            <p>Cuidado de la salud bucal, prevención y orientación odontológica.</p>
+          </div>
+          <span class="indicador-clic">🔍 Haz clic para más información</span>
+        </div>
+      </div>
+
+      <div class="tarjeta-interactiva" onclick="abrirModal('Laboratorio Clínico', 'Exámenes de sangre, orina, perfiles lipídicos, glucosa y análisis diagnósticos detallados.', 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80')">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" alt="Laboratorio">
+        <div class="tarjeta-cuerpo">
+          <div>
+            <h3>Laboratorio Clínico</h3>
+            <p>Análisis bioquímicos y pruebas clínicas para diagnósticos precisos.</p>
+          </div>
+          <span class="indicador-clic">🔍 Haz clic para más información</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Referencias OMS en Formato Vancouver -->
+    <div style="margin: 40px auto 0 auto; max-width: 900px; padding: 20px; background: white; border-radius: 14px; box-shadow: var(--sombra); font-size: 13px; color: #555;">
+      <strong style="display: block; margin-bottom: 5px; color: var(--oscuro);">Referencias Bibliográficas y Protocolos Clínicos (Organización Mundial de la Salud - Formato Vancouver):</strong>
+      <ol style="padding-left: 20px; line-height: 1.5;">
+        <li>Organización Mundial de la Salud. Atención primaria de salud: informe de la Conferencia Internacional sobre Atención Primaria de Salud, Alma-Ata. Ginebra: OMS; 1978. Disponible en: <a href="https://apps.who.int/iris/handle/10665/39228" target="_blank">https://apps.who.int/iris/handle/10665/39228</a></li>
+        <li>Organización Mundial de la Salud. Marco de la OMS para servicios de salud integrados centrados en las personas. Ginebra: OMS; 2016.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL INFORMATIVO -->
+<div id="modal-servicio" class="modal-overlay">
+  <div class="modal-contenedor">
+    <button class="cerrar-modal" onclick="cerrarModal()">✕</button>
+    <img id="modal-imagen" src="" alt="Servicio" style="height:220px; border-radius:10px; margin-bottom:15px;">
+    <h3 id="modal-titulo" style="color:var(--oscuro); margin-bottom:10px;"></h3>
+    <p id="modal-descripcion" style="color:#555; line-height:1.6;"></p>
+    <div style="margin-top: 20px;">
+      <a href="citas.html" class="boton">Agendar Cita para este Servicio</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="autor-badge">✚ Salud Integral 2026 - Especialidades Clínicas</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

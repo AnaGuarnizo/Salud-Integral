@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salud Integral | Evaluador de Signos Vitales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">✚ Salud Integral</a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="vitales.html" class="activo">Signos Vitales</a>
+    <a href="rotacion.html">Reloj Postural</a>
+    <a href="emergencias.html" class="btn-alerta-nav">🚨 Alarma 911</a>
+    <a href="citas.html">Citas</a>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <div class="encabezado">
+      <span class="etiqueta">Herramienta Clínica</span>
+      <h2>Evaluador de Signos Vitales</h2>
+      <p>Introduce tus valores medidos para recibir una interpretación clínica de referencia inmediata.</p>
+    </div>
+
+    <div class="herramienta-box">
+      <div class="inputs-grid">
+        <div class="campo-input">
+          <label>Presión Sistólica (mmHg)</label>
+          <input type="number" id="sistolica" value="120" oninput="evaluarSignos()">
+        </div>
+        <div class="campo-input">
+          <label>Presión Diastólica (mmHg)</label>
+          <input type="number" id="diastolica" value="80" oninput="evaluarSignos()">
+        </div>
+        <div class="campo-input">
+          <label>Frecuencia Cardíaca (lpm)</label>
+          <input type="number" id="pulso" value="75" oninput="evaluarSignos()">
+        </div>
+        <div class="campo-input">
+          <label>Temperatura (°C)</label>
+          <input type="number" step="0.1" id="temp" value="36.6" oninput="evaluarSignos()">
+        </div>
+        <div class="campo-input">
+          <label>Saturación Oxígeno SpO2 (%)</label>
+          <input type="number" id="oxigeno" value="98" oninput="evaluarSignos()">
+        </div>
+      </div>
+
+      <div id="resultado-vitales" style="margin-top: 15px; padding: 15px; border-radius: 8px; background: #f0f7f7;">
+        <!-- Resultado dinámico -->
+      </div>
+
+      <!-- Referencias OMS en Formato Vancouver con Enlaces -->
+      <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #cbd6dc; font-size: 13px; color: #555;">
+        <strong style="display: block; margin-bottom: 5px; color: var(--oscuro);">Referencias Bibliográficas (Organización Mundial de la Salud - Formato Vancouver):</strong>
+        <ol style="padding-left: 20px; line-height: 1.5;">
+          <li>Organización Mundial de la Salud. Hipertensión arterial: directrices de la OMS para el diagnóstico y tratamiento. Ginebra: OMS; 2023. Disponible en: <a href="https://www.who.int/es/news-room/fact-sheets/detail/hypertension" target="_blank">https://www.who.int/es/news-room/fact-sheets/detail/hypertension</a></li>
+          <li>World Health Organization. Clinical care for severe acute respiratory infection: toolkit for clinical management. Geneva: World Health Organization; 2020. Disponible en: <a href="https://www.who.int/publications/i/item/clinical-care-of-severe-acute-respiratory-infections-tool-kit" target="_blank">https://www.who.int/publications/i/item/clinical-care-of-severe-acute-respiratory-infections-tool-kit</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="autor-badge">✚ Salud Integral 2026 - Herramientas de Diagnóstico</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salud Integral | Reloj Postural</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">✚ Salud Integral</a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="vitales.html">Signos Vitales</a>
+    <a href="rotacion.html" class="activo">Reloj Postural</a>
+    <a href="emergencias.html" class="btn-alerta-nav">🚨 Alarma 911</a>
+    <a href="citas.html">Citas</a>
+  </nav>
+</header>
+
+<main>
+  <section class="fondo-claro">
+    <div class="encabezado">
+      <span class="etiqueta">Prevención de Escaras</span>
+      <h2>Reloj de Cambios Posturales</h2>
+      <p>Sistema interactivo para programar la rotación de pacientes en cama y prevenir úlceras por presión.</p>
+    </div>
+
+    <div class="herramienta-box">
+      <div class="reloj-rotacion">
+        <div class="visor-posicion">
+          <span style="font-size:12px; color:#666;">POSICIÓN ACTUAL</span>
+          <span id="posicion-actual-texto" style="font-size: 18px; color: var(--oscuro); margin: 8px 0;">Boca arriba</span>
+          <span id="temporizador-reloj" style="font-size: 14px; color: var(--principal);">Sig. en: 02:00:00</span>
+        </div>
+
+        <div style="text-align: left; max-width: 450px;">
+          <h3 id="titulo-posicion">Decúbito Supino (Boca arriba)</h3>
+          <p id="desc-posicion" style="margin: 10px 0; font-size: 14px;">
+            Revisar puntos de presión: Nuca, omóplatos, codos, zona sacra y talones. Colocar almohada bajo las pantorrillas [1].
+          </p>
+          <div style="display:flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+            <button class="boton" onclick="siguientePosicion()">Registrar Cambio de Posición</button>
+            <button class="boton boton-secundario" onclick="reiniciarTemporizador()">Reiniciar Reloj</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Referencias OMS en Formato Vancouver con Enlaces -->
+      <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #cbd6dc; font-size: 13px; color: #555;">
+        <strong style="display: block; margin-bottom: 5px; color: var(--oscuro);">Referencias Bibliográficas (Organización Mundial de la Salud - Formato Vancouver):</strong>
+        <ol style="padding-left: 20px; line-height: 1.5;">
+          <li>Organización Mundial de la Salud. Directrices de la OMS sobre la atención y seguridad del paciente inmovilizado. Ginebra: OMS; 2020. Disponible en: <a href="https://www.who.int/es/publications" target="_blank">https://www.who.int/es/publications</a></li>
+          <li>World Health Organization. WHO Guidelines on Patient Safety: Prevention of pressure injuries in clinical practice. Geneva: World Health Organization; 2021. Disponible en: <a href="https://www.who.int/teams/integrated-health-services/patient-safety" target="_blank">https://www.who.int/teams/integrated-health-services/patient-safety</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="autor-badge">✚ Salud Integral 2026 - Cuidado de Pacientes</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
